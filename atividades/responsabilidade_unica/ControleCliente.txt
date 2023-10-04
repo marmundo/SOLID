@@ -1,7 +1,7 @@
 public class ControleCliente {
     private Cliente cliente;
 	
-    public void salvarClienteNoBancoDeDados() {
+    public void salvarClienteNoBancoDeDados(Cliente cliente) {
         // Código para salvar os detalhes do cliente no banco de dados
     }
 
