@@ -20,6 +20,4 @@ public class Cliente {
 	public void setFatura(Fatura fatura) {
 		this.fatura = fatura;
 	}
-    
-    
 }
