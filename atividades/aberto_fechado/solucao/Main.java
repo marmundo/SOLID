@@ -1,9 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-        Shape circle = new Circle();
-        Shape triangle = new Triangle();
+        
+      ArrayList<Shape> formas = new ArrayList<Shape>()
+      formas.add(new Circle())
+      formas.add(new Triangle())
 
-        circle.draw();
-        triangle.draw();
+        formas.forEach((forma) -> forma.draw()); 
+        
     }
 }
