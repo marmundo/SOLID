@@ -25,7 +25,7 @@ class ProcessadorDePedidos {
         }
 
         // 3. Responsabilidade: Salvar no banco
-        repositorio.salvar(pedido);
+        //repositorio.salvar(pedido);
 
         // 4. Responsabilidade: Enviar e-mail
         System.out.println("Enviando e-mail de confirmação...");
