@@ -2,11 +2,9 @@
  * ESTA É A CLASSE QUE VIOLA TODOS OS PRINCÍPIOS SOLID
  */
 class ProcessadorDePedidos {
-    // Violação do DIP: Depende diretamente da implementação concreta
-    private MySQLRepositorio repositorio = new MySQLRepositorio();
 
     // Violação do SRP: Esta classe faz tudo
-    public void processar(Pedido pedido) {
+    public void processar(Pedido pedido, SalvarBD banco, EnviarEmail email, Calculadora calc) {
         // 1. Responsabilidade: Calcular o total
         double total = 0;
         for (Item item : pedido.getItens()) {
@@ -25,10 +23,10 @@ class ProcessadorDePedidos {
         }
 
         // 3. Responsabilidade: Salvar no banco
-        //repositorio.salvar(pedido);
+        banco.salvar(pedido); 
 
         // 4. Responsabilidade: Enviar e-mail
-        System.out.println("Enviando e-mail de confirmação...");
+        email.print(); 
         // Lógica de envio de e-mail
     }
 }
